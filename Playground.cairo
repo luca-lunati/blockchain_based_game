@@ -42,7 +42,7 @@ func main{output_ptr: felt*, range_check_ptr}() {
 }
 
 func attackAndGetDamage{range_check_ptr,output_ptr: felt*}(pkmn1: Pokemon, atk: Attack*, pkmn2: Pokemon) -> felt {
-   // Damage formula = (((2* level *1 or 2) / 5  * AttackDamage * Attack.Pok1 / Defense.Pok2) / 50 )* STAB *  random (217 bis 255 / 255) 
+   // Damage formula = (((2* level * (1 or 2)) / 5  * AttackDamage * Attack.Pokemon1 / Defense.Pokemon2) / 50 ) * STAB *  random (205 to 255 / 255) 
    alloc_locals;
     if (atk.type == pkmn1.type1) {
         local stab = 2;  // Same Type Attack Bonus (STAB)
